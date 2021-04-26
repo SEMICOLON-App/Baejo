@@ -1,4 +1,5 @@
 package com.example.domain.base
 
-interface Mapper {
+interface Mapper<F,T> {
+    fun mapFrom(from : F) : T
 }
