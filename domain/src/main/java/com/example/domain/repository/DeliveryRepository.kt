@@ -11,7 +11,7 @@ interface DeliveryRepository {
 
     fun getTrackData(): Single<List<TrackData>>
 
-    fun singleDelete(carrierData: CarrierData) : Completable
+    fun singleDelete(carrierData: TrackData) : Completable
 
-    fun allDelete(carrierData: CarrierData) : Completable
+    fun allDelete(carrierData: Unit) : Completable
 }
