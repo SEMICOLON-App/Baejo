@@ -2,6 +2,8 @@ package com.example.domain.service
 
 import com.example.domain.base.Result
 import com.example.domain.entity.CarrierData
+import com.example.domain.entity.DeliveryBasicInformationData
+import com.example.domain.entity.StorageData
 import com.example.domain.entity.TrackData
 import com.example.domain.repository.DeliveryRepository
 import com.example.domain.toResult
@@ -15,14 +17,19 @@ class DeliveryServiceImpl(
         override fun getCarrier(): Single<Result<List<CarrierData>>> =
             repository.getCarrier().toResult()
 
-        override fun getTrackData(): Single<Result<List<TrackData>>> =
-            repository.getTrackData().toResult()
+        override fun getTrackData(
+            deliveryBasicInformationData: DeliveryBasicInformationData
+        ): Single<Result<List<TrackData>>> =
+            repository.getTrackData(deliveryBasicInformationData).toResult()
 
-        override fun singleDelete(carrierData: TrackData): Single<Result<Unit>> =
-            repository.singleDelete(carrierData).toSingleResult()
+        override fun shortage(): Single<Result<List<StorageData>>> =
+            repository.storageData().toResult()
+
+        override fun singleDelete(data: TrackData): Single<Result<Unit>> =
+            repository.singleDelete(data).toSingleResult()
 
 
-        override fun allDelete(carrierData: Unit): Single<Result<Unit>> =
-            repository.allDelete(carrierData).toSingleResult()
+        override fun allDelete(): Single<Result<Unit>> =
+            repository.allDelete().toSingleResult()
 
     }

@@ -5,10 +5,10 @@ import com.example.domain.base.UseCase
 import com.example.domain.service.DeliveryService
 import io.reactivex.Single
 
-class AllDeleteUseCase(
+class DeleteAllSearchHistoryUseCase(
     val service : DeliveryService
 ): UseCase<Unit, Result<Unit>>() {
     override fun create(data: Unit): Single<Result<Unit>> =
-        service.allDelete(data)
+        service.allDelete()
 
 }

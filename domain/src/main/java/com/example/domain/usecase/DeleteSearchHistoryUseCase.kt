@@ -6,9 +6,10 @@ import com.example.domain.entity.TrackData
 import com.example.domain.service.DeliveryService
 import io.reactivex.Single
 
-class GetTrackUseCase(
+class DeleteSearchHistoryUseCase(
     private val service: DeliveryService
-):UseCase<Unit,Result<List<TrackData>>>() {
-    override fun create(data: Unit): Single<Result<List<TrackData>>> =
-         service.getTrackData()
+): UseCase<TrackData , Result<Unit>>() {
+    override fun create(data: TrackData): Single<Result<Unit>> =
+         service.singleDelete(data)
+
 }
