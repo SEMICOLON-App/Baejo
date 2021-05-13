@@ -11,5 +11,5 @@ class GetDeliveryProgressUseCase(
     private val service: DeliveryService
 ):UseCase<DeliveryBasicInformationData,Result<List<TrackData>>>() {
     override fun create(data: DeliveryBasicInformationData): Single<Result<List<TrackData>>> =
-         service.getTrackData(data)
+         service.getDeliveryProgress(data)
 }

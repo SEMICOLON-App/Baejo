@@ -9,6 +9,6 @@ class DeleteAllSearchHistoryUseCase(
     val service : DeliveryService
 ): UseCase<Unit, Result<Unit>>() {
     override fun create(data: Unit): Single<Result<Unit>> =
-        service.allDelete()
+        service.deleteAllSearchHistory()
 
 }
