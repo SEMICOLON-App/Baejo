@@ -14,7 +14,7 @@ interface DeliveryService {
 
     fun deleteSearchHistory(data: TrackData): Single<Result<Unit>>
 
-    fun deleteAllSearchHistory() : Single<Result<Unit>>
+    fun deleteAllSearchHistory(): Single<Result<Unit>>
 
-    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData) : Single<Result<InquiryResultData>>
+    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData): Single<Result<InquiryResultData>>
 }

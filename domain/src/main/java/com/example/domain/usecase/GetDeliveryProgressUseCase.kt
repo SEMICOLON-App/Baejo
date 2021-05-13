@@ -9,7 +9,7 @@ import io.reactivex.Single
 
 class GetDeliveryProgressUseCase(
     private val service: DeliveryService
-):UseCase<DeliveryBasicInformationData,Result<List<TrackData>>>() {
+) : UseCase<DeliveryBasicInformationData, Result<List<TrackData>>>() {
     override fun create(data: DeliveryBasicInformationData): Single<Result<List<TrackData>>> =
-         service.getDeliveryProgress(data)
+        service.getDeliveryProgress(data)
 }

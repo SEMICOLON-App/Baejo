@@ -8,7 +8,7 @@ import io.reactivex.Single
 
 class GetCarrierUseCase(
     private val service: DeliveryService
-): UseCase<Unit, Result<List<CarrierData>>>(){
+) : UseCase<Unit, Result<List<CarrierData>>>() {
     override fun create(data: Unit): Single<Result<List<CarrierData>>> =
         service.getCarrier()
 }

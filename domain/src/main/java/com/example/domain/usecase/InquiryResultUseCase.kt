@@ -10,7 +10,7 @@ import io.reactivex.Single
 
 class InquiryResultUseCase(
     private val service: DeliveryService
-): UseCase<DeliveryBasicInformationData, Result<InquiryResultData>>() {
+) : UseCase<DeliveryBasicInformationData, Result<InquiryResultData>>() {
     override fun create(data: DeliveryBasicInformationData): Single<Result<InquiryResultData>> =
         service.inquiryResult(data)
 }

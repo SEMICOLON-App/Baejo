@@ -12,9 +12,9 @@ interface DeliveryRepository {
 
     fun storageData(): Single<List<StorageData>>
 
-    fun deleteSearchHistory(carrierData: TrackData) : Completable
+    fun deleteSearchHistory(carrierData: TrackData): Completable
 
-    fun deleteAllSearchHistory() : Completable
+    fun deleteAllSearchHistory(): Completable
 
-    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData) : Single<InquiryResultData>
+    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData): Single<InquiryResultData>
 }

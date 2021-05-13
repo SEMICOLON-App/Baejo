@@ -8,7 +8,7 @@ import io.reactivex.Single
 
 class StorageUseCase(
     private val service: DeliveryService
-):UseCase<Unit,Result<List<StorageData>>>() {
+) : UseCase<Unit, Result<List<StorageData>>>() {
     override fun create(data: Unit): Single<Result<List<StorageData>>> =
         service.shortage()
 }

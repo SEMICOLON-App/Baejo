@@ -8,8 +8,8 @@ import io.reactivex.Single
 
 class DeleteSearchHistoryUseCase(
     private val service: DeliveryService
-): UseCase<TrackData , Result<Unit>>() {
+) : UseCase<TrackData, Result<Unit>>() {
     override fun create(data: TrackData): Single<Result<Unit>> =
-         service.deleteSearchHistory(data)
+        service.deleteSearchHistory(data)
 
 }

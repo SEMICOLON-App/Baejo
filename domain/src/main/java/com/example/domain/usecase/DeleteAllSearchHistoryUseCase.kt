@@ -6,8 +6,8 @@ import com.example.domain.service.DeliveryService
 import io.reactivex.Single
 
 class DeleteAllSearchHistoryUseCase(
-    val service : DeliveryService
-): UseCase<Unit, Result<Unit>>() {
+    private val service: DeliveryService
+) : UseCase<Unit, Result<Unit>>() {
     override fun create(data: Unit): Single<Result<Unit>> =
         service.deleteAllSearchHistory()
 
