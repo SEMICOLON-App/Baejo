@@ -8,13 +8,11 @@ interface DeliveryService {
 
     fun getCarrier(): Single<Result<List<CarrierData>>>
 
-    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<Result<List<TrackData>>>
+    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<Result<List<DeliveryProgress>>>
 
-    fun shortage(): Single<Result<List<StorageData>>>
+    fun searchHistory(): Single<Result<List<SearchHistoryData>>>
 
-    fun deleteSearchHistory(data: TrackData): Single<Result<Unit>>
+    fun deleteSearchHistory(data: DeliveryProgress): Single<Result<Unit>>
 
     fun deleteAllSearchHistory(): Single<Result<Unit>>
-
-    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData): Single<Result<InquiryResultData>>
 }

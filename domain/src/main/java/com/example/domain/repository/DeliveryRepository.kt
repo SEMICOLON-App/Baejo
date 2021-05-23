@@ -8,13 +8,11 @@ interface DeliveryRepository {
 
     fun getCarrier(): Single<List<CarrierData>>
 
-    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<List<TrackData>>
+    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<List<DeliveryProgress>>
 
-    fun storageData(): Single<List<StorageData>>
+    fun searchHistoryData(): Single<List<SearchHistoryData>>
 
-    fun deleteSearchHistory(carrierData: TrackData): Completable
+    fun deleteSearchHistory(carrierData: DeliveryProgress): Completable
 
     fun deleteAllSearchHistory(): Completable
-
-    fun inquiryResult(deliveryBasicInformationData: DeliveryBasicInformationData): Single<InquiryResultData>
 }
