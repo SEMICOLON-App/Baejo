@@ -15,20 +15,15 @@ class DeliveryServiceImpl(
 
     override fun getDeliveryProgress(
         deliveryBasicInformationData: DeliveryBasicInformationData
-    ): Single<Result<List<TrackData>>> =
+    ): Single<Result<List<DeliveryProgress>>> =
         repository.getDeliveryProgress(deliveryBasicInformationData).toResult()
 
-    override fun shortage(): Single<Result<List<StorageData>>> =
-        repository.storageData().toResult()
+    override fun searchHistory(): Single<Result<List<SearchHistoryData>>> =
+        repository.searchHistoryData().toResult()
 
-    override fun deleteSearchHistory(data: TrackData): Single<Result<Unit>> =
+    override fun deleteSearchHistory(data: DeliveryProgress): Single<Result<Unit>> =
         repository.deleteSearchHistory(data).toSingleResult()
 
     override fun deleteAllSearchHistory(): Single<Result<Unit>> =
         repository.deleteAllSearchHistory().toSingleResult()
-
-    override fun inquiryResult(
-        deliveryBasicInformationData: DeliveryBasicInformationData
-    ): Single<Result<InquiryResultData>> =
-        repository.inquiryResult(deliveryBasicInformationData).toResult()
 }
