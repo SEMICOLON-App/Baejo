@@ -8,7 +8,7 @@ import io.reactivex.Single
 
 interface DeliveryDataSource {
 
-    fun getSearchHistoryList(searchHistoryEntity: SearchHistoryEntity) : List<SearchHistoryEntity>
+    fun getSearchHistoryList() : List<SearchHistoryEntity>
 
     fun addSearchHistory(searchHistoryEntity: SearchHistoryEntity) : Completable
 
@@ -18,5 +18,5 @@ interface DeliveryDataSource {
 
     fun getCourierServiceName() : Single<List<CarrierData>>
 
-    fun getDeliveryProgress() : Single<DeliveryProgressData>
+    fun getDeliveryProgress(carrierId : String, trackId : String) : Single<DeliveryProgressData>
 }
