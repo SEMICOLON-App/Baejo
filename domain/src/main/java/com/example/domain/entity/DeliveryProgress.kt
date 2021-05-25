@@ -6,7 +6,5 @@ data class DeliveryProgress(
     val receive : String,
     val dispatch : String,
     val deliveryState: String,
-    val time: String,
-    val location: String,
-    val detailState : String
+    val deliveryInformation: List<DeliveryInformationData>
 )
