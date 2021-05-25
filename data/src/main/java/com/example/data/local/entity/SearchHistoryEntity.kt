@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class SearchHistoryEnity (
+data class SearchHistoryEntity (
 
     @PrimaryKey
     val waybillNumber: String,

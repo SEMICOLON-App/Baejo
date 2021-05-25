@@ -1,4 +1,5 @@
 package com.example.data.remote.entity
 
-class DeliveryProgressFromData {
-}
+data class DeliveryProgressFromData(
+    val name: String
+)

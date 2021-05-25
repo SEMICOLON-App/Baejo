@@ -1,3 +1,5 @@
 package com.example.data.remote.entity
 
-data class DeliveryProgressLocationName()
+data class DeliveryProgressLocationName(
+    val name : String
+)
