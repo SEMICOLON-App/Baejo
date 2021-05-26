@@ -8,7 +8,11 @@ import com.example.data.remote.entity.DeliveryProgressData
 import io.reactivex.Completable
 import io.reactivex.Single
 
-class DeliveryDataSourceImpl(private val searchHistoryDao: SearchHistoryDao, val deliveryService: DeliveryService) : DeliveryDataSource {
+class DeliveryDataSourceImpl(
+    private val searchHistoryDao: SearchHistoryDao,
+    private val deliveryService: DeliveryService
+) : DeliveryDataSource {
+
     override fun getSearchHistoryList(): List<SearchHistoryEntity>  =
         searchHistoryDao.getSearchHistoryList()
 

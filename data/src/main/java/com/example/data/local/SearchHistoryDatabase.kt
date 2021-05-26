@@ -1,4 +1,4 @@
-package com.example
+package com.example.data.local
 
 import androidx.room.Database
 import com.example.data.local.dao.SearchHistoryDao
