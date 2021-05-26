@@ -1,6 +1,10 @@
 package com.example.domain.entity
 
 data class DeliveryInformationData(
-     val time: String,
+
+     val date: String,
+
      val location: String,
-     val detailState : String)
+
+     val detailState : String
+)
