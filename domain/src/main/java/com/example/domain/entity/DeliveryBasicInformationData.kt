@@ -4,7 +4,5 @@ data class DeliveryBasicInformationData(
 
     val courierServiceName: String,
 
-    val waybillNumber: String,
-
-    val date : String
+    val waybillNumber: String
 )
