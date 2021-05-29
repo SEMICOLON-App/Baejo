@@ -148,6 +148,7 @@
                 app:layout_constraintTop_toTopOf="@id/tv_text_state_result" />
 
             <ProgressBar
+                android:id="@+id/pb_state_result"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="0dp"
                 android:layout_height="5dp"
@@ -302,6 +303,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_progress_result"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="#F5F5F5"
