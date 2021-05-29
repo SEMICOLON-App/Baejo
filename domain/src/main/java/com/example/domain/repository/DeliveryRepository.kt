@@ -8,7 +8,7 @@ interface DeliveryRepository {
 
     fun getCarrier(): Single<List<CarrierData>>
 
-    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<List<DeliveryProgress>>
+    fun getDeliveryProgress(deliveryBasicInformationData: DeliveryBasicInformationData): Single<DeliveryProgress>
 
     fun searchHistoryData(): Single<List<SearchHistoryData>>
 

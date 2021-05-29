@@ -15,7 +15,7 @@ class DeliveryServiceImpl(
 
     override fun getDeliveryProgress(
         deliveryBasicInformationData: DeliveryBasicInformationData
-    ): Single<Result<List<DeliveryProgress>>> =
+    ): Single<Result<DeliveryProgress>> =
         repository.getDeliveryProgress(deliveryBasicInformationData).toResult()
 
     override fun searchHistory(): Single<Result<List<SearchHistoryData>>> =
