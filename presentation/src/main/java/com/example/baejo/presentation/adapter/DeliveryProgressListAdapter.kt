@@ -33,7 +33,7 @@ class DeliveryProgressListAdapter : RecyclerView.Adapter<DeliveryProgressListAda
     override fun getItemCount(): Int =
         deliveryProgressList.size
 
-    fun setMemoList(deliveryProgressList: List<DeliveryInformationData>){
+    fun setDeliveryProgressList(deliveryProgressList: List<DeliveryInformationData>){
         this.deliveryProgressList = deliveryProgressList
         notifyDataSetChanged()
     }
