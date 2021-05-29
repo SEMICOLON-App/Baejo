@@ -4,13 +4,11 @@ import android.view.View
 import android.widget.Toast
 import com.example.baejo.R
 import com.example.baejo.databinding.ActivityResultBinding
+import com.example.baejo.presentation.IntentExtraKey
 import com.example.baejo.presentation.adapter.DeliveryProgressListAdapter
 import com.example.baejo.presentation.base.BaseActivity
 import com.example.baejo.presentation.viewmodel.ResultViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-
-const val KEY_COURIER_SERVICE_NAME = "CourierServiceName"
-const val KEY_WAYBILL_NUMBER = "WaybillNumber"
 
 class ResultActivity : BaseActivity<ActivityResultBinding>() {
 
@@ -21,8 +19,8 @@ class ResultActivity : BaseActivity<ActivityResultBinding>() {
         get() = R.layout.activity_result
 
     override fun init() {
-        val courierServiceName = intent.getStringExtra(KEY_COURIER_SERVICE_NAME)
-        val waybillNumber = intent.getStringExtra(KEY_WAYBILL_NUMBER)
+        val courierServiceName = intent.getStringExtra(IntentExtraKey.KEY_COURIER_SERVICE_NAME)
+        val waybillNumber = intent.getStringExtra(IntentExtraKey.KEY_WAYBILL_NUMBER)
         val deliveryProgressListAdapter = DeliveryProgressListAdapter()
 
         binding.btnBackResult.setOnClickListener {
