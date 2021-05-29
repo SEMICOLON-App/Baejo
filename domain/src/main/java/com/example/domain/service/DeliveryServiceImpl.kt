@@ -21,7 +21,7 @@ class DeliveryServiceImpl(
     override fun searchHistory(): Single<Result<List<SearchHistoryData>>> =
         repository.searchHistoryData().toResult()
 
-    override fun deleteSearchHistory(data: DeliveryProgress): Single<Result<Unit>> =
+    override fun deleteSearchHistory(data: SearchHistoryData): Single<Result<Unit>> =
         repository.deleteSearchHistory(data).toSingleResult()
 
     override fun deleteAllSearchHistory(): Single<Result<Unit>> =

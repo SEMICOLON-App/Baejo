@@ -12,7 +12,7 @@ interface DeliveryRepository {
 
     fun searchHistoryData(): Single<List<SearchHistoryData>>
 
-    fun deleteSearchHistory(carrierData: DeliveryProgress): Completable
+    fun deleteSearchHistory(carrierData: SearchHistoryData): Completable
 
     fun deleteAllSearchHistory(): Completable
 }
