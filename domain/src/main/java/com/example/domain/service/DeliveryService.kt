@@ -12,7 +12,7 @@ interface DeliveryService {
 
     fun searchHistory(): Single<Result<List<SearchHistoryData>>>
 
-    fun deleteSearchHistory(data: DeliveryProgress): Single<Result<Unit>>
+    fun deleteSearchHistory(data: SearchHistoryData): Single<Result<Unit>>
 
     fun deleteAllSearchHistory(): Single<Result<Unit>>
 }
