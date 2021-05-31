@@ -14,11 +14,11 @@ class DeleteDialog(
     private val context: Context,
     private val title: String,
     private val detail: String,
-    private val onDialogButtonCLickListener: OnDialogButtonCLickListener
+    private val onDialogButtonClickListener: OnDialogButtonClickListener
 ) {
 
-    interface OnDialogButtonCLickListener {
-        fun onOkClick()
+    interface OnDialogButtonClickListener {
+        fun onDeleteClick()
         fun onNoClick()
     }
 
@@ -39,12 +39,12 @@ class DeleteDialog(
         binding.tvDetailDefaultDialog.text = detail
 
         binding.btnOkDefaultDialog.setOnClickListener {
-            onDialogButtonCLickListener.onOkClick()
+            onDialogButtonClickListener.onDeleteClick()
             dialog.dismiss()
         }
 
         binding.btnNoDefaultDialog.setOnClickListener {
-            onDialogButtonCLickListener.onNoClick()
+            onDialogButtonClickListener.onNoClick()
             dialog.dismiss()
         }
 
