@@ -3,7 +3,7 @@ package com.example.data.datasource
 import com.example.data.local.dao.SearchHistoryDao
 import com.example.data.local.entity.SearchHistoryEntity
 import com.example.data.remote.DeliveryService
-import com.example.data.remote.entity.CarrierData
+import com.example.data.remote.entity.CarrierEntityData
 import com.example.data.remote.entity.DeliveryProgressData
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -25,7 +25,7 @@ class DeliveryDataSourceImpl(
     override fun deleteAllSearchHistory(): Completable =
         searchHistoryDao.deleteAllSearchHistory()
 
-    override fun getCourierServiceName(): Single<List<CarrierData>> =
+    override fun getCourierServiceName(): Single<List<CarrierEntityData>> =
         deliveryService.getCourierServiceName()
 
     override fun getDeliveryProgress(carrierId : String, trackId : String): Single<DeliveryProgressData>  =

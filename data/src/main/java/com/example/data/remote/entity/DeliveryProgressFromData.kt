@@ -1,6 +1,9 @@
 package com.example.data.remote.entity
 
+import com.google.gson.annotations.SerializedName
+
 data class DeliveryProgressFromData(
 
-    val name: String
+    @SerializedName("name")
+    val fromName: String
 )
