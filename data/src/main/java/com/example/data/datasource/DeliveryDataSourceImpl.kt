@@ -4,6 +4,7 @@ import com.example.data.local.dao.SearchHistoryDao
 import com.example.data.local.entity.SearchHistoryEntity
 import com.example.data.remote.DeliveryService
 import com.example.data.remote.entity.CarrierEntityData
+import com.example.data.remote.entity.DeliveryInformationEntityData
 import com.example.data.remote.entity.DeliveryProgressData
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -28,6 +29,7 @@ class DeliveryDataSourceImpl(
     override fun getCourierServiceName(): Single<List<CarrierEntityData>> =
         deliveryService.getCourierServiceName()
 
-    override fun getDeliveryProgress(carrierId : String, trackId : String): Single<DeliveryProgressData>  =
-        deliveryService.getDeliveryProgress(carrierId, trackId)
+    override fun getDeliveryProgress(deliveryInformationEntityData: DeliveryInformationEntityData): Single<DeliveryProgressData> =
+        deliveryService.getDeliveryProgress(deliveryInformationEntityData.courierServiceId,deliveryInformationEntityData.waybillNumber)
+    
 }
