@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
-      <module name="Baejo.data" target="1.8" />
+      <module name="Baejo.data" target="11" />
       <module name="Baejo.mylibrary" target="1.8" />
-      <module name="Baejo.presentation" target="1.8" />
+      <module name="Baejo.presentation" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

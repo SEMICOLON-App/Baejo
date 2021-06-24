@@ -2,7 +2,6 @@ package com.example.domain.entity
 
 data class DeliveryBasicInformationData(
 
-    val courierServiceName: String,
-
+    val courierServiceId: String,
     val waybillNumber: String
 )
